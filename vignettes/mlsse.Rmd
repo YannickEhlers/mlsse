@@ -1,0 +1,20 @@
+---
+title: "mlsse"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{mlsse}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(mlsse)
+```
+

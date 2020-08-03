@@ -8,9 +8,10 @@ Author@R: c(
 Description: The package can be used for simulation of the behavior of a defined performance measure, which depence on the sampe size. 
 License: LGPL-3
 URL: https://github.com/YannickEhlers/mlsse
-Deoends: R (>=4.0.2) 
-Imports:
-    amelia (>= 1.7.6),
+Deoends: 
+    R (>=4.0.2) 
+Imports: 
+    Amelia (>= 1.7.6),
     mlr3 (>= 0.4.0-9000),
     mlr3learners (>= 0.2.0.9003),
     mlr3measures (>= 0.2.0)

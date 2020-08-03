@@ -10,9 +10,9 @@ License: LGPL-3
 URL: https://github.com/YannickEhlers/mlsse
 Deoends: R (>=4.0.2) 
 Imports:
-    Amelia (>= 1.7.6)
-    mlr3 (>= 0.4.0-9000)
-    mlr3learners (>= 0.2.0.9003)
+    Amelia (>= 1.7.6),
+    mlr3 (>= 0.4.0-9000),
+    mlr3learners (>= 0.2.0.9003),
     mlr3measures (>= 0.2.0)
 Suggests: 
     knitr,

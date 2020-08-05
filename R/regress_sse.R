@@ -14,6 +14,11 @@
 
 Regress_SSE <- function(a_data, nseq_SampleSizeToTest, c_learner, c_measurment, n_bootstraps, c_RegressionTarget){
 
+  #required packages
+  require("mlr3")
+  require("mlr3learners")
+  require("mlr3measures")
+
   #Variables Collection
   c_Usedlearner <- lrn(c_learner)
   c_Usedmeasure <- msr(c_measurment)

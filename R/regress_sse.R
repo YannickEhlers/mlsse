@@ -10,14 +10,12 @@
 #'@param c_classificationTarget A parameter of the data object, which should be used as target for the regression
 #'
 #'@return The output can be used for plotting in the *plotting function
+#'@import mlr3
+#'@import mlr3learners
+#'@import mlr3measures
 #'@export
 
 Regress_SSE <- function(a_data, nseq_SampleSizeToTest, c_learner, c_measurment, n_bootstraps, c_RegressionTarget){
-
-  #required packages
-  require("mlr3")
-  requireNamespace("mlr3learners")
-  requireNamespace("mlr3measures")
 
   #Variables Collection
   c_Usedlearner <- lrn(c_learner)

@@ -3,5 +3,6 @@ Sample Size Estimation for Machine Learning including Classification and Regress
 
 
 ```r
-print("Hello")
+#Development version from GitHub
+install_github("YannickEhlers/mlsse)
 ```

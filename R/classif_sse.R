@@ -16,13 +16,12 @@ Classif_SSE <- function(a_data, nseq_SampleSizeToTest, c_learner, c_measurment, 
 
   #required packages
   require("mlr3")
-  require("mlr3learners")
-  require("mlr3measures")
-
+  requireNamespace("mlr3learners")
+  requireNamespace("mlr3measures")
 
   #Variables Collection
-  c_Usedlearner <- lrn(c_learner)
-  c_Usedmeasure <- msr(c_measurment)
+  c_Usedlearner <- mlr3learners::lrn(c_learner)
+  c_Usedmeasure <- mlr3measures::msr(c_measurment)
 
   m_ResMatrix <- matrix(NA, nrow = length(nseq_SampleSizeToTest), ncol = n_bootstraps)
 

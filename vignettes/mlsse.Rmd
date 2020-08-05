@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Introduction
+## Introduction
 
 This package includes function for the estimation of the sample size for different machine learning algorithms, including
 regression and classification learners. 

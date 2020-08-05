@@ -71,6 +71,11 @@ Regress_SSE <- function(a_data, nseq_SampleSizeToTest, c_learner, c_measurment, 
   }
 
 
-  plot(x = nseq_SampleSizeToTest, y = rowMeans(m_ResMatrix), type = "l", col ="blue", main = "mean squared error",
-       ylab = c_measurment, xlab = "N Sample")
+  #plot(x = nseq_SampleSizeToTest, y = rowMeans(m_ResMatrix), type = "l", col ="blue", main = "mean squared error",ylab = c_measurment, xlab = "N Sample")
+
+  setClass("Simulation Sample Size Estimation", slots=list(MachineLearningType="character",Learner="character",Measurement="character",Bootstrap="numeric",SampleSizesTested="numeric",MeasuredMatrix="matrix"))
+
+  OutputObject <- new(Class = "Simulation Sample Size Estimation", MachineLearningType="Regression",Learner=c_learner,Measurement=c_measurment,Bootstrap=n_bootstraps,SampleSizesTested=nseq_SampleSizeToTest,MeasuredMatrix=m_ResMatrix)
+
+  return(OutputObject)
 }

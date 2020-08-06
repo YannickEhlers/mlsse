@@ -2,6 +2,8 @@
 
 export(Classif_SSE)
 export(Regress_SSE)
+export(SynthDataGen)
+import(Amelia)
 import(mlr3)
 import(mlr3learners)
 import(mlr3measures)

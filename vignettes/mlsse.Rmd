@@ -17,9 +17,41 @@ knitr::opts_chunk$set(
 ## Introduction
 
 This package includes function for the estimation of the sample size for different machine learning algorithms, including
-regression and classification learners. 
+regression and classification learners. It uses multiple imputation for data generation and estimation of learner performance. 
 
 ```{r setup}
 library(mlsse)
 ```
 
+
+## SynthDataGen
+
+This function can generate new data, based on the deviation and covariance of the given data. It uses the amelia algorithm to close gaps in the data, which are placed there on purpose.  
+
+```{r}
+SynthDataGen(a_OriginalData = iris, i_OutputData = 200, c_method = "amelia")
+```
+
+
+## Regression Learner 
+
+This function is a regression learner, which core elements are the functions from mlr3 package. There is the possibility for bootstrapping.
+
+```{r}
+Regress_SSE(a_data = mtcars, nseq_SampleSizeToTest = 10:100, c_learner = "regr.rpart", c_measurment = "regr.mse", n_bootstraps = 10, c_RegressionTarget = "hp")
+```
+
+
+## Classification Learner
+
+This function is a classification learner, which core elements are the functions from mlr3 package. There is the possibility for bootstrapping
+
+```{r}
+Classif_SSE(a_data = iris, nseq_SampleSizeToTest = 10:100, c_learner = "classif.rpart", c_measurment = "classif.acc", n_bootstraps = 10, c_classificationTarget = "Species")
+```
+
+
+## sessionInfo
+```{r}
+sessionInfo()
+```

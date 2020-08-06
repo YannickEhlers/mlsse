@@ -8,7 +8,7 @@ The repository includes the development version of R package mlsse. This Package
 #Development version from GitHub
 install_github("YannickEhlers/mlsse)
 ```
-##First Steps
+## First Steps
 ```r
 library(mlsse)
 ```

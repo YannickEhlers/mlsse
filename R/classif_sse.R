@@ -41,10 +41,6 @@ Classif_SSE <- function(a_data, nseq_SampleSizeToTest, c_learner, c_measurment, 
     }
   }
 
-  #setClass("Simulation Sample Size Estimation", slots=list(MachineLearningType="character",Learner="character",Measurement="character",Bootstrap="numeric",SampleSizesTested="numeric",MeasuredMatrix="matrix"))
-
-  #OutputObject <- new(Class = "Simulation Sample Size Estimation", MachineLearningType="Classification",Learner=c_learner,Measurement=c_measurment,Bootstrap=n_bootstraps,SampleSizesTested=nseq_SampleSizeToTest,MeasuredMatrix=m_ResMatrix)
-
   OutputObject <- list(Class = "Simulation Sample Size Estimation", MachineLearningType= "Classification" ,Learner=c_learner,Measurement=c_measurment,Bootstrap=n_bootstraps,SampleSizesTested=nseq_SampleSizeToTest,MeasuredMatrix=m_ResMatrix)
 
   return(OutputObject)

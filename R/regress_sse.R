@@ -24,6 +24,8 @@ Regress_SSE <- function(a_data, nseq_SampleSizeToTest, c_learner, c_measurment, 
 
   for (i in nseq_SampleSizeToTest){
 
+    Run <- which(i == nseq_SampleSizeToTest)
+
     a_dataUsedForAccuracyCalculation <- a_data[sample(nrow(a_data), i),]
 
     task <- TaskRegr$new(id = "Regress", backend = a_dataUsedForAccuracyCalculation, target = c_RegressionTarget)
